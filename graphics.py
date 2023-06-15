@@ -34,34 +34,11 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
-        self.headerList = ['S/N', "Name", "Matric No.", "Grade", 'TCP', 'TNU', 'GPA', 'Remarks']
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def display(self, rows):
-        for row in rows:
-            rowPosition = self.tableWidget.rowCount()
-
-            if rowPosition > row[0]:
-                continue
-
-            itemCount = 0
-            self.tableWidget.setRowCount(rowPosition + 1)
-            self.tableWidget.setColumnCount(len(row))
-            qtablewidgetitem = QtWidgets.QTableWidgetItem()
-            self.tableWidget.setVerticalHeaderItem(rowPosition, qtablewidgetitem)
-            self.tableWidget.setHorizontalHeaderLabels(self.headerList)
-
-            for item in row:
-                self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
-                self.tableWidget.setItem(rowPosition, itemCount, self.qtablewidgetitem)
-                self.qtablewidgetitem = self.tableWidget.item(rowPosition, itemCount)
-                self.qtablewidgetitem.setText(str(item))
-
-                itemCount += 1
-            rowPosition += 1
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
