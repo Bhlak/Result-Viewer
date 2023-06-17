@@ -40,18 +40,43 @@ class MyWindow(QtWidgets.QMainWindow):
         self.tableWidget.setColumnCount(len(self.headerList))
         self.tableWidget.horizontalHeader
         self.tableWidget.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
+        self.tableWidget.setHorizontalHeaderLabels(self.headerList)
+        rowPosition = self.tableWidget.rowCount()
         for row in rows:
-            rowPosition = self.tableWidget.rowCount()
+            print(f'Row Data: {row}')
+        
 
-            if rowPosition > row[0]:
+            if (rowPosition > row[0]):
                 continue
+            # elif rowPosition == 0:
+            #     rowPosition += 1
+            
 
-            itemCount = 0
             self.tableWidget.setRowCount(rowPosition + 1)
             qtablewidgetitem = QtWidgets.QTableWidgetItem()
             self.tableWidget.setVerticalHeaderItem(rowPosition, qtablewidgetitem)
-            self.tableWidget.setHorizontalHeaderLabels(self.headerList)
+            if rowPosition == 0:
+                itemCount = 0
+                for item in row:
+                    if itemCount != 4 and itemCount != 5 and itemCount != 6:
+                        self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
+                        self.tableWidget.setItem(rowPosition, itemCount, self.qtablewidgetitem)
+                        # self.qtablewidgetitem = self.tableWidget.item(rowPosition, itemCount)
+                        # self.qtablewidgetitem.setText("Test")
+                        itemCount += 1
+                        continue
+                    self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
+                    self.tableWidget.setItem(rowPosition, itemCount, self.qtablewidgetitem)
+                    print(f"ItemCount: {itemCount}, RowPositon: {rowPosition}")
+                    self.qtablewidgetitem = self.tableWidget.item(rowPosition, itemCount)
+                    print("Item put: ",self.qtablewidgetitem)
+                    self.qtablewidgetitem.setText(str(item))
 
+                    itemCount += 1
+                rowPosition += 1
+                continue
+                
+            itemCount = 0
             for item in row:
                 self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
                 self.tableWidget.setItem(rowPosition, itemCount, self.qtablewidgetitem)
