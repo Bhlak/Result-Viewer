@@ -33,7 +33,7 @@ def getAll(dbFile):
 
     try:
 
-              ff dbbbb    nn blbhll l nl klkhl      c = conn.cursor()
+        c = conn.cursor()
         c.execute(get_all)
         return c
     except Exception as e:
