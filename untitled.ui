@@ -6,21 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1531</width>
-    <height>848</height>
+    <width>1534</width>
+    <height>944</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1534</width>
+     <height>0</height>
+    </size>
+   </property>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1531</width>
-      <height>821</height>
+      <width>1541</width>
+      <height>931</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -36,13 +42,16 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>300</y>
-       <width>1531</width>
-       <height>521</height>
+       <y>410</y>
+       <width>621</width>
+       <height>411</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(119, 118, 123);</string>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustToContents</enum>
      </property>
      <attribute name="verticalHeaderVisible">
       <bool>true</bool>
@@ -52,7 +61,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>30</y>
+       <y>150</y>
        <width>231</width>
        <height>31</height>
       </rect>
@@ -72,7 +81,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>70</y>
+       <y>190</y>
        <width>271</width>
        <height>21</height>
       </rect>
@@ -90,7 +99,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>100</y>
+       <y>220</y>
        <width>231</width>
        <height>21</height>
       </rect>
@@ -108,7 +117,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>140</y>
+       <y>260</y>
        <width>151</width>
        <height>21</height>
       </rect>
@@ -126,7 +135,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>170</y>
+       <y>290</y>
        <width>221</width>
        <height>21</height>
       </rect>
@@ -139,7 +148,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>200</y>
+       <y>320</y>
        <width>81</width>
        <height>16</height>
       </rect>
@@ -152,7 +161,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>230</y>
+       <y>350</y>
        <width>101</width>
        <height>17</height>
       </rect>
@@ -165,7 +174,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>260</y>
+       <y>380</y>
        <width>67</width>
        <height>17</height>
       </rect>
@@ -174,19 +183,139 @@
       <string>400</string>
      </property>
     </widget>
+    <widget class="QTableWidget" name="tableWidget1">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>410</y>
+       <width>231</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(119, 118, 123);</string>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget2">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>410</y>
+       <width>231</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(119, 118, 123);</string>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget3">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>410</y>
+       <width>231</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(119, 118, 123);</string>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget4">
+     <property name="geometry">
+      <rect>
+       <x>1310</x>
+       <y>410</y>
+       <width>231</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(119, 118, 123);</string>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>390</y>
+       <width>231</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Previous</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>390</y>
+       <width>231</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Present</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>390</y>
+       <width>231</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cummulative</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>label_2</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_5</zorder>
+    <zorder>label_6</zorder>
+    <zorder>label_7</zorder>
+    <zorder>label_15</zorder>
+    <zorder>tableWidget1</zorder>
+    <zorder>tableWidget2</zorder>
+    <zorder>tableWidget3</zorder>
+    <zorder>tableWidget4</zorder>
+    <zorder>tableWidget</zorder>
+    <zorder>label_8</zorder>
+    <zorder>label_9</zorder>
+    <zorder>label_10</zorder>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1531</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
