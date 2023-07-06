@@ -265,7 +265,6 @@ if __name__ == "__main__":
     window = MyWindow()
     window.show()
     rows = convert(dbFile)
-    # print(rows)
     window.display(rows)
     window.display_previous(rows)
     window.display_present(rows)
