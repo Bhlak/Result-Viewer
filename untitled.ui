@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1543</width>
+    <width>1644</width>
     <height>931</height>
    </rect>
   </property>
@@ -37,7 +37,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1541</width>
+      <width>1631</width>
       <height>931</height>
      </rect>
     </property>
@@ -56,25 +56,6 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QTableWidget" name="tableWidget">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>410</y>
-       <width>621</width>
-       <height>411</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(119, 118, 123);</string>
-     </property>
-     <property name="sizeAdjustPolicy">
-      <enum>QAbstractScrollArea::AdjustToContents</enum>
-     </property>
-     <attribute name="verticalHeaderVisible">
-      <bool>true</bool>
-     </attribute>
-    </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
@@ -201,78 +182,210 @@
       <string>400</string>
      </property>
     </widget>
-    <widget class="QTableWidget" name="tableWidget1">
+    <widget class="QScrollArea" name="scrollArea">
      <property name="geometry">
       <rect>
-       <x>620</x>
+       <x>0</x>
        <y>410</y>
-       <width>231</width>
+       <width>1601</width>
        <height>411</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(119, 118, 123);</string>
+      <string notr="true"/>
      </property>
-     <attribute name="verticalHeaderVisible">
+     <property name="widgetResizable">
       <bool>true</bool>
-     </attribute>
-    </widget>
-    <widget class="QTableWidget" name="tableWidget2">
-     <property name="geometry">
-      <rect>
-       <x>850</x>
-       <y>410</y>
-       <width>231</width>
-       <height>411</height>
-      </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(119, 118, 123);</string>
-     </property>
-     <attribute name="verticalHeaderVisible">
-      <bool>true</bool>
-     </attribute>
-    </widget>
-    <widget class="QTableWidget" name="tableWidget3">
-     <property name="geometry">
-      <rect>
-       <x>1080</x>
-       <y>410</y>
-       <width>231</width>
-       <height>411</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(119, 118, 123);</string>
-     </property>
-     <attribute name="verticalHeaderVisible">
-      <bool>true</bool>
-     </attribute>
-    </widget>
-    <widget class="QTableWidget" name="tableWidget4">
-     <property name="geometry">
-      <rect>
-       <x>1310</x>
-       <y>410</y>
-       <width>231</width>
-       <height>411</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(119, 118, 123);</string>
-     </property>
-     <attribute name="verticalHeaderVisible">
-      <bool>true</bool>
-     </attribute>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1599</width>
+        <height>409</height>
+       </rect>
+      </property>
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>541</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(119, 118, 123);</string>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContents</enum>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget1">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>0</y>
+         <width>261</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(119, 118, 123);</string>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget2">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>0</y>
+         <width>261</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(119, 118, 123);</string>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget3">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>0</y>
+         <width>256</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(119, 118, 123);</string>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget4">
+       <property name="geometry">
+        <rect>
+         <x>1320</x>
+         <y>0</y>
+         <width>271</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(119, 118, 123);</string>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+      </widget>
+      <widget class="QPushButton" name="btn_next">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>370</y>
+         <width>89</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Next</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_prev">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>370</y>
+         <width>89</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Previous</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_gpa">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>370</y>
+         <width>101</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sort By GPA</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_mat">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>370</y>
+         <width>121</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter By Mat. No</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>620</x>
+       <x>540</x>
        <y>390</y>
-       <width>231</width>
+       <width>251</width>
        <height>17</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QScrollArea {
+	border: none
+}</string>
      </property>
      <property name="text">
       <string>Previous</string>
@@ -287,9 +400,9 @@
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>850</x>
+       <x>810</x>
        <y>390</y>
-       <width>231</width>
+       <width>251</width>
        <height>17</height>
       </rect>
      </property>
@@ -303,7 +416,7 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>1080</x>
+       <x>1090</x>
        <y>390</y>
        <width>231</width>
        <height>17</height>
@@ -316,6 +429,7 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <zorder>scrollArea</zorder>
     <zorder>label</zorder>
     <zorder>label_2</zorder>
     <zorder>label_3</zorder>
@@ -324,11 +438,6 @@
     <zorder>label_6</zorder>
     <zorder>label_7</zorder>
     <zorder>label_15</zorder>
-    <zorder>tableWidget1</zorder>
-    <zorder>tableWidget2</zorder>
-    <zorder>tableWidget3</zorder>
-    <zorder>tableWidget4</zorder>
-    <zorder>tableWidget</zorder>
     <zorder>label_8</zorder>
     <zorder>label_9</zorder>
     <zorder>label_10</zorder>
