@@ -131,8 +131,8 @@ class MyWindow(QtWidgets.QMainWindow):
             itemCount += 1
         rowPosition += 1
         for row in rows:
-            if (rowPosition > row[0]):
-                continue            
+            # if (rowPosition > row[0]):
+            #     continue            
 
             self.tableWidget.setRowCount(rowPosition + 1)
             qtablewidgetitem = QtWidgets.QTableWidgetItem()
