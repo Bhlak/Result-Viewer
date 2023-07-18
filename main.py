@@ -96,11 +96,11 @@ class MyWindow(QtWidgets.QMainWindow):
 
 
     def display(self, rows):   # First Table
-        self.tableWidget.setColumnCount(len(self.headerList[:4]))
+        self.tableWidget.setColumnCount(len(self.headerList[:3]))
         self.tableWidget.horizontalHeader
         self.tableWidget.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
         self.tableWidget.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        self.tableWidget.setHorizontalHeaderLabels(self.headerList[:4])
+        self.tableWidget.setHorizontalHeaderLabels(self.headerList[:3])
 
         self.tableWidget4.setColumnCount(1)
         self.tableWidget4.horizontalHeader
@@ -109,7 +109,7 @@ class MyWindow(QtWidgets.QMainWindow):
 
         rowPosition = self.tableWidget.rowCount()
 
-        row = ['', '', '', '']
+        row = ['', '', '']
         self.tableWidget.setRowCount(rowPosition + 1)
         self.tableWidget.setVerticalHeaderItem(rowPosition, QtWidgets.QTableWidgetItem())
         self.tableWidget4.setRowCount(rowPosition + 1)
@@ -146,7 +146,7 @@ class MyWindow(QtWidgets.QMainWindow):
             for item in row:
                 self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
                 
-                if itemCount in [4, 5, 6, 7, 8, 9]:
+                if itemCount in [3, 4, 5, 6, 7, 8, 9]:
                     itemCount += 1
                     continue
                 
