@@ -16,9 +16,12 @@ def create_table(conn):
         name TEXT,
         matric_no TEXT,
         grade TEXT,
-        tcp INTEGER,
-        tnu INTEGER,
-        gpa REAL,
+        tcpPast INTEGER,
+        tnuPast INTEGER,
+        gpaPast REAL,
+        tcpPresent INTEGER,
+        tnuPresent INTEGER,
+        gpaPresent REAL,
         remarks TEXT
     )
     """)
@@ -36,12 +39,15 @@ def insert_dummy_data(conn):
         tcp = random.randint(10, 25)
         tnu = random.randint(18, 20)
         gpa = round(tcp / tnu, 2)
+        tcp1 = random.randint(10, 25)
+        tnu1 = random.randint(18, 20)
+        gpa1 = round(tcp1 / tnu1, 2)
         remarks = random.choice(remarks_options)
 
         cursor.execute("""
-        INSERT INTO students (name, matric_no, grade, tcp, tnu, gpa, remarks)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-        """, (name, matric_no, grade, tcp, tnu, gpa, remarks))
+        INSERT INTO students (name, matric_no, grade, tcpPast, tnuPast, gpaPast, tcpPresent, tnuPresent, gpaPresent, remarks)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (name, matric_no, grade, tcp, tnu, gpa, tcp1, tnu1, gpa1, remarks))
 
     conn.commit()
 
@@ -51,11 +57,11 @@ def display_data(conn):
     cursor.execute("SELECT * FROM students")
     rows = cursor.fetchall()
 
-    print("Name\t\tMatric No.\tGrade\tTCP\tTNU\tGPA\tRemarks")
-    print("-" * 80)
+    print("Name\t\tMatric No.\tGrade\tTCPPast\tTNUPast\tGPAPast\tTCPPresent\tTNUPresent\tGPAPresent\tRemarks")
+    print("-" * 120)
 
     for row in rows:
-        print(f"{row[1]}\t{row[2]}\t\t{row[3]}\t{row[4]}\t{row[5]}\t{row[6]}\t{row[7]}")
+        print(f"{row[1]}\t{row[2]}\t\t{row[3]}\t{row[4]}\t{row[5]}\t{row[6]}\t{row[7]}\t{row[8]}\t{row[9]}\t{row[10]}")
 
 
 def delete_data(conn):
@@ -64,7 +70,7 @@ def delete_data(conn):
 
 db_file = "students.db"
 conn = create_connection(db_file)
-# create_table(conn)
+create_table(conn)
 insert_dummy_data(conn)
 # display_data(conn)
 # delete_data(conn)
