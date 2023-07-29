@@ -40,6 +40,16 @@ class MyWindow(QtWidgets.QMainWindow):
         except Exception as e:
             print(e)
 
+    def calculate_remarks(self, grade):
+        remarks = ["First Class", "Second Class Upper", "Second Class Lower", "Third Class"]
+        if grade >= 4.50:
+            return remarks[0]
+        elif grade <= 4.49 and grade >= 3.50:
+            return remarks[1]
+        elif grade <= 3.49 and grade >= 2.50:
+            return remarks[2]
+        else:
+            return remarks[3]
 
     def convert(self, file, offset, num):
         rows = []
@@ -109,27 +119,27 @@ class MyWindow(QtWidgets.QMainWindow):
 
         rowPosition = self.tableWidget.rowCount()
 
-        row = ['', '', '']
-        self.tableWidget.setRowCount(rowPosition + 1)
-        self.tableWidget.setVerticalHeaderItem(rowPosition, QtWidgets.QTableWidgetItem())
-        self.tableWidget4.setRowCount(rowPosition + 1)
-        self.tableWidget4.setVerticalHeaderItem(rowPosition, QtWidgets.QTableWidgetItem())
+        # row = ['', '', '']
+        # self.tableWidget.setRowCount(rowPosition + 1)
+        # self.tableWidget.setVerticalHeaderItem(rowPosition, QtWidgets.QTableWidgetItem())
+        # self.tableWidget4.setRowCount(rowPosition + 1)
+        # self.tableWidget4.setVerticalHeaderItem(rowPosition, QtWidgets.QTableWidgetItem())
 
-        itemCount = 0
-        for item in row:
-            if itemCount == 0 and rowPosition == 0:
-                self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
-                self.tableWidget4.setItem(rowPosition, itemCount, self.qtablewidgetitem)
-                self.qtablewidgetitem = self.tableWidget4.item(rowPosition, itemCount)
-                self.qtablewidgetitem.setText('')
+        # itemCount = 0
+        # for item in row:
+        #     if itemCount == 0 and rowPosition == 0:
+        #         self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
+        #         self.tableWidget4.setItem(rowPosition, itemCount, self.qtablewidgetitem)
+        #         self.qtablewidgetitem = self.tableWidget4.item(rowPosition, itemCount)
+        #         self.qtablewidgetitem.setText('')
 
-            self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
-            self.tableWidget.setItem(rowPosition, itemCount, self.qtablewidgetitem)
-            self.qtablewidgetitem = self.tableWidget.item(rowPosition, itemCount)
-            self.qtablewidgetitem.setText(str(item))
+        #     self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
+        #     self.tableWidget.setItem(rowPosition, itemCount, self.qtablewidgetitem)
+        #     self.qtablewidgetitem = self.tableWidget.item(rowPosition, itemCount)
+        #     self.qtablewidgetitem.setText(str(item))
 
-            itemCount += 1
-        rowPosition += 1
+        #     itemCount += 1
+        # rowPosition += 1
         for row in rows:
             # if (rowPosition > row[0]):
             #     continue            
@@ -154,7 +164,7 @@ class MyWindow(QtWidgets.QMainWindow):
                     tw = self.tableWidget4
                     tw.setItem(rowPosition, 0, self.qtablewidgetitem)
                     self.qtablewidgetitem = tw.item(rowPosition, 0)
-                    self.qtablewidgetitem.setText(str(item))
+                    self.qtablewidgetitem.setText(str(self.calculate_remarks(self.calculation(row[4:10], 2))))
                     break
                 
                 self.tableWidget.setItem(rowPosition, itemCount, self.qtablewidgetitem)
@@ -180,14 +190,14 @@ class MyWindow(QtWidgets.QMainWindow):
         tw.setVerticalHeaderItem(rowPosition, QtWidgets.QTableWidgetItem())
 
         itemCount = 0
-        for item in self.headerList[4:7]:
-            self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
-            tw.setItem(rowPosition, itemCount, self.qtablewidgetitem)
-            self.qtablewidgetitem = tw.item(rowPosition, itemCount)
-            self.qtablewidgetitem.setText(str(item))
+        # for item in self.headerList[4:7]:
+        #     self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
+        #     tw.setItem(rowPosition, itemCount, self.qtablewidgetitem)
+        #     self.qtablewidgetitem = tw.item(rowPosition, itemCount)
+        #     self.qtablewidgetitem.setText(str(item))
 
-            itemCount += 1
-        rowPosition += 1
+        #     itemCount += 1
+        # rowPosition += 1
 
         for row in rows:
             row = row[4:7]
@@ -222,15 +232,15 @@ class MyWindow(QtWidgets.QMainWindow):
         tw.setRowCount(rowPosition + 1)
         tw.setVerticalHeaderItem(rowPosition, QtWidgets.QTableWidgetItem())
 
-        itemCount = 0
-        for item in self.headerList[4:7]:
-            self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
-            tw.setItem(rowPosition, itemCount, self.qtablewidgetitem)
-            self.qtablewidgetitem = tw.item(rowPosition, itemCount)
-            self.qtablewidgetitem.setText(str(item))
+        # itemCount = 0
+        # for item in self.headerList[4:7]:
+        #     self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
+        #     tw.setItem(rowPosition, itemCount, self.qtablewidgetitem)
+        #     self.qtablewidgetitem = tw.item(rowPosition, itemCount)
+        #     self.qtablewidgetitem.setText(str(item))
 
-            itemCount += 1
-        rowPosition += 1
+        #     itemCount += 1
+        # rowPosition += 1
 
         for row in rows:
             row = row[7:10]
@@ -266,14 +276,14 @@ class MyWindow(QtWidgets.QMainWindow):
         tw.setVerticalHeaderItem(rowPosition, QtWidgets.QTableWidgetItem())
 
         itemCount = 0
-        for item in self.headerList[4:7]:
-            self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
-            tw.setItem(rowPosition, itemCount, self.qtablewidgetitem)
-            self.qtablewidgetitem = tw.item(rowPosition, itemCount)
-            self.qtablewidgetitem.setText(str(item))
+        # for item in self.headerList[4:7]:
+        #     self.qtablewidgetitem = QtWidgets.QTableWidgetItem()
+        #     tw.setItem(rowPosition, itemCount, self.qtablewidgetitem)
+        #     self.qtablewidgetitem = tw.item(rowPosition, itemCount)
+        #     self.qtablewidgetitem.setText(str(item))
 
-            itemCount += 1
-        rowPosition += 1
+        #     itemCount += 1
+        # rowPosition += 1
 
         for row in rows:
             row = row[4:10]

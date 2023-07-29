@@ -36,10 +36,10 @@ def insert_dummy_data(conn):
         name = names.get_full_name()
         matric_no = f'MAT{i:03}'
         grade = random.choice(['A', 'B', 'C', 'D', 'E', 'F'])
-        tcp = random.randint(10, 25)
+        tcp = random.randint(30, 80)
         tnu = random.randint(18, 20)
         gpa = round(tcp / tnu, 2)
-        tcp1 = random.randint(10, 25)
+        tcp1 = random.randint(30, 80)
         tnu1 = random.randint(18, 20)
         gpa1 = round(tcp1 / tnu1, 2)
         remarks = random.choice(remarks_options)
